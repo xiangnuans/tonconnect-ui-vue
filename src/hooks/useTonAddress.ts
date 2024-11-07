@@ -1,8 +1,8 @@
-import { computed } from 'vue-demi';
+import { computed, ComputedRef } from 'vue-demi';
 import { CHAIN, toUserFriendlyAddress } from '@tonconnect/ui';
 import { useTonWallet } from './useTonWallet';
 
-export function useTonAddress(userFriendly = true) {
+export function useTonAddress(userFriendly = true): ComputedRef<string> {
     const wallet = useTonWallet();
 
     const tonAddress = computed(() => {

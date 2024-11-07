@@ -19,7 +19,7 @@ export const TonConnectUIPlugin: PluginObject<TonConnectUIProviderProps> = {
     if (isVue2) {
       app.prototype.$tonConnectUI = tonConnectUI.value;
     } else {
-      // @ts-expect-error
+      // @ts-expect-error: TypeScript does not recognize the globalProperties property in Vue 3
       app.config.globalProperties.$tonConnectUI = tonConnectUI.value;
     }
   },
