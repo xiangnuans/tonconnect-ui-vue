@@ -9,6 +9,7 @@ export function useTonConnectModal() {
     onMounted(() => {
         if (tonConnectUI) {
             state.value = tonConnectUI.modal.state;
+            
             tonConnectUI.onModalStateChange((value: WalletsModalState) => {
                 state.value = value;
             });
