@@ -1,5 +1,9 @@
 module.exports = {
-  extends: ["plugin:vue/vue3-recommended"],
+  parser: '@typescript-eslint/parser',
+  extends: [
+    "plugin:vue/vue3-recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
   parserOptions: {
     sourceType: "module",
     ecmaVersion: "latest",
@@ -7,7 +11,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ["vue"],
+  plugins: ["vue", "@typescript-eslint", "unused-imports"],
   rules: {
     "import/extensions": ["off"],
     "@typescript-eslint/explicit-function-return-type": [

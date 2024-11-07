@@ -17,8 +17,7 @@ export function useTonConnectUI() {
     const tonConnectUI = globalPropertiesMap?.$tonConnectUI as TonConnectUI | undefined;
 
     if (!tonConnectUI) {
-        console.log("TonConnect is not avaliable");
-        return
+        throw new Error("TonConnect is not avaliable");
     }
 
     checkProvider(tonConnectUI);
