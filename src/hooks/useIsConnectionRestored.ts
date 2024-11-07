@@ -2,16 +2,16 @@ import { ref, onMounted, Ref } from 'vue-demi';
 import { useTonConnectUI } from './useTonConnectUI';
 
 export function useIsConnectionRestored(): Ref<boolean> {
-    const restored = ref(false);
-    const { tonConnectUI } = useTonConnectUI();
+  const restored = ref(false);
+  const { tonConnectUI } = useTonConnectUI();
 
-    onMounted(() => {
-        if (tonConnectUI) {
-            tonConnectUI.connectionRestored.then(() => {
-                restored.value = true;
-            });
-        }
-    });
+  onMounted(() => {
+    if (tonConnectUI) {
+      tonConnectUI.connectionRestored.then(() => {
+        restored.value = true;
+      });
+    }
+  });
 
-    return restored;
+  return restored;
 }

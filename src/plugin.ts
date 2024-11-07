@@ -1,11 +1,7 @@
-import {
-  isVue2,
-  shallowRef,
-  PluginObject,
-} from "vue-demi";
-import { TonConnectUI } from "@tonconnect/ui";
-import { isClientSide } from "./utils/web";
-import { TonConnectUIProviderProps } from "./types";
+import { isVue2, shallowRef, PluginObject } from 'vue-demi';
+import { TonConnectUI } from '@tonconnect/ui';
+import { isClientSide } from './utils/web';
+import { TonConnectUIProviderProps } from './types';
 
 export const TonConnectUIPlugin: PluginObject<TonConnectUIProviderProps> = {
   install(app, options) {

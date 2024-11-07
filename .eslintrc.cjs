@@ -1,12 +1,12 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
+  parser: "vue-eslint-parser",
   extends: [
-    'plugin:vue/vue3-essential',
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended', 
-    'plugin:prettier/recommended',
+    "plugin:vue/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
   ],
   parserOptions: {
+    parser: "@typescript-eslint/parser",
     sourceType: "module",
     ecmaVersion: "latest",
     ecmaFeatures: {
@@ -35,5 +35,6 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-explicit-any": "error",
+    "quotes": ["error", "single"],
   },
 };
