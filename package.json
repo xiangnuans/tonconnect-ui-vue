@@ -12,7 +12,7 @@
     "preview": "vite preview",
     "lint-fix": "eslint --fix --ext .ts,.vue src",
     "lint": "eslint",
-    "prepare": "husky",
+    "prepare": "husky install",
     "security-audit": "npm audit && npm outdated",
     "release": "standard-version"
   },
