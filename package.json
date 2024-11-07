@@ -10,7 +10,8 @@
     "build:lib:2.7": "npx vue-demi-switch 2 && vite build",
     "build:lib:3": "npx vue-demi-switch 3 && vite build",
     "preview": "vite preview",
-    "lint-fix": "eslint --fix --ext .ts,.vue src",
+    "lint-fix": "eslint --fix",
+    "lint": "eslint",
     "prepare": "husky",
     "security-audit": "npm audit && npm outdated",
     "release": "standard-version"
@@ -94,6 +95,8 @@
     "standard-version": "^9.5.0"
   },
   "lint-staged": {
-    "*.{vue,ts,tsx}": "lint-fix"
+    "*.{vue,ts,tsx}": [
+      "lint-fix"
+    ]
   }
 }
