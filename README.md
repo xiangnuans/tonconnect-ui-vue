@@ -210,7 +210,12 @@ import { Locales, useTonConnectUI } from '@townsquarelabs/ui-vue';
 export default {
   name: 'Settings',
   setup() {
-    const {tonConnectUI, setOptions} = useTonConnectUI();
+    const {tonConnectUI, setOptions, error} = useTonConnectUI();
+
+    if (error) {
+      console.warn(error.message); // 输出警告信息
+      return {}; // 或者在 UI 上显示提示
+    }
 
     const onLanguageChange = (lang) => {
       setOptions({ language: lang as Locales });
