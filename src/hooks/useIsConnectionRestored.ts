@@ -6,7 +6,7 @@ export function useIsConnectionRestored(): Ref<boolean> {
   const { tonConnectUI } = useTonConnectUI();
 
   onMounted(() => {
-    if (tonConnectUI) {
+    if (tonConnectUI?.closeModal) {
       tonConnectUI.connectionRestored.then(() => {
         restored.value = true;
       });
